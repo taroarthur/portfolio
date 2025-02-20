@@ -31,7 +31,6 @@
     font-family: 'Slibinas', sans-serif;
     font-size: 2.5rem;
     text-transform: uppercase;
-    font-weight: bold;
     letter-spacing: 2px;
     line-height: 1;
     color: #19191A;
@@ -39,7 +38,7 @@
 }
 
 .banner-title:hover {
-    color: white; /* White on hover */
+    color: #19191A; /* White on hover */
 }
 
 /* Work Buttons */
