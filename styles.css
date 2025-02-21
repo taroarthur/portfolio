@@ -13,6 +13,7 @@ html, body {
     overflow-x: hidden; /* Prevents horizontal scrolling */
     background-color: #E63312; /* Ensures full background color */
 }
+
 /* Load Slibinas */
 @font-face {
     font-family: 'Slibinas';
@@ -23,14 +24,14 @@ html, body {
 
 /* Sidebar Layout */
 .sidebar {
-    width: 100vw;
-    height: 100vh;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
     background-color: #FF3600;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
+    padding: 5vh 5vw; /* Responsive padding */
 }
 
 /* Clickable Logo */
@@ -41,7 +42,7 @@ html, body {
 /* Logo Title */
 .banner-title {
     font-family: 'Slibinas', sans-serif;
-    font-size: 1.5rem;
+    font-size: 4vw; /* Scales with screen width */
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1;
@@ -50,23 +51,23 @@ html, body {
 }
 
 .banner-title:hover {
-    color: #19191A; /* White on hover */
+    color: #19191A;
 }
 
 /* Work Buttons */
 .work-links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1.5vh;
 }
 
 .work-button {
     font-family: 'Geist', sans-serif;
-    font-size: 1.2rem;
+    font-size: 2vw; /* Responsive */
     font-weight: bold;
     color: #19191A;
     text-decoration: none;
-    padding: 5px 0;
+    padding: 1vh 0;
     transition: color 0.3s ease;
 }
 
@@ -78,18 +79,48 @@ html, body {
 .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1vh;
 }
 
 .nav-links a {
     font-family: 'Geist', sans-serif;
     text-decoration: none;
     color: black;
-    font-size: 1rem;
+    font-size: 1.5vw;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #D8D8E8;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .banner-title {
+        font-size: 5vw;
+    }
+    .work-button {
+        font-size: 2.5vw;
+    }
+    .nav-links a {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100vw;
+        height: auto;
+        padding: 3vh 5vw;
+    }
+    .banner-title {
+        font-size: 6vw;
+    }
+    .work-button {
+        font-size: 3vw;
+    }
+    .nav-links a {
+        font-size: 2.5vw;
+    }
 }
