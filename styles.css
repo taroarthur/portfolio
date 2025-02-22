@@ -21,6 +21,11 @@ html, body {
     font-weight: normal;
     font-style: normal;
 }
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
 
 /* Sidebar Layout */
 .sidebar {
@@ -94,6 +99,17 @@ html, body {
 
 .nav-links a:hover {
     color: #D8D8E8;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
 }
 
 /* Responsive Design */
