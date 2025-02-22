@@ -104,40 +104,50 @@ html, body {
 .content {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
-.content img {
-    width: 150px; /* Adjust as needed */
+/* Profile Image */
+.profile-img {
+    width: 200px;
     height: auto;
+}
+
+/* Bio Text */
+.bio {
+    font-family: 'Geist', sans-serif;
+    font-size: 1.2vw;
+    line-height: 1.6;
+    color: #19191A;
+    max-width: 600px;
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .banner-title {
-        font-size: 2.5vw;
-    }
-    .work-button {
-        font-size: 1.25vw;
-    }
-    .nav-links a {
-        font-size: 1vw;
+    .banner-title, .work-button, .nav-links a, .bio {
+        font-size: 1.5vw;
     }
 }
 
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100vw;
-        height: auto;
+    .container {
+        grid-template-columns: 1fr;
         padding: 3vh 5vw;
+        height: auto;
     }
-    .banner-title {
-        font-size: 3vw;
+
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
     }
-    .work-button {
+
+    .profile-img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .bio {
         font-size: 1.5vw;
-    }
-    .nav-links a {
-        font-size: 1.25vw;
     }
 }
