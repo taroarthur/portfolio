@@ -9,6 +9,19 @@
     font-style: normal;
 }
 
+:root {
+    --bg-color: #FF3600;
+    --text-color: #19191A;
+    --highlight-color: #D8D8E8;
+}
+
+/* Everything Else (See/Hear Pages) */
+.see-page, .hear-page {
+    --bg-color: #D8D8E8;
+    --text-color: #19191A;
+    --highlight-color: #FF3600;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,8 +29,8 @@
 }
 
 body {
-    background-color: #FF3600;
-    color: #19191A;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -63,8 +76,8 @@ body {
     font-family: 'Geist', sans-serif;
     font-size: 1.2vw;
     font-weight: bold;
-    line-height: 1.5;
-    color: #19191A;
+    line-height: 1.8;
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -85,7 +98,7 @@ body {
 
 .work-links a:hover,
 .nav-links a:hover {
-    color: #D8D8E8;
+    color: var(--highlight-color);
 }
 
 /* Right Column */
@@ -115,6 +128,9 @@ body {
 .bio-text p {
     margin-bottom: 2vh;
 }
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
