@@ -15,8 +15,10 @@
                 <h1 class="logo-title">TARO<br>ARTHUR</h1>
             </a>
             <div class="work-links">
-                <a href="see.html" class="work-button">Warping Reality (See)</a>
-                <a href="hear.html" class="work-button">Making Noise (Hear)</a>
+                <a href="#" class="work-button" data-page="see" onclick="toggleDropdown('see-projects')">Warping Reality (See)</a>
+                <div id="see-projects" class="project-list"></div>
+                <a href="#" class="work-button" data-page="hear" onclick="toggleDropdown('hear-projects')">Making Noise (Hear)</a>
+                <div id="hear-projects" class="project-list" style="display: none;"></div>
             </div>
             <nav class="nav-links">
                 <a href="#">About</a>
@@ -28,7 +30,9 @@
 
         <!-- Content -->
         <div class="right-column">
-            
+            <div id="project-content">
+                <!-- Project content will be loaded here -->
+            </div>
         </div>
     </div>
 </body>

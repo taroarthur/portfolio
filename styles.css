@@ -132,6 +132,47 @@ body {
     margin-bottom: 2vh;
 }
 
+.project-list {
+    margin-top: 0; 
+    padding-left: 20px;
+}
+
+.project-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-list ul li {
+    
+}
+
+.project-list ul li a {
+    font-size: 1vw; 
+    font-weight: normal; 
+    text-decoration: none; 
+    color: var(--text-color); 
+    transition: color 0.3s ease; 
+}
+
+.project-list ul li a:hover {
+    color: var(--highlight-color); 
+}
+
+#project-content {
+    margin-top: 20px;
+}
+
+#project-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+#project-content iframe {
+    width: 100%;
+    height: 315px;
+    margin-top: 20px;
+}
+
 
 
 /* Responsive Design */
