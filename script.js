@@ -1,9 +1,9 @@
-const SHEET_ID = 'YOUR_GOOGLE_SHEET_ID';
+const SHEET_ID = '15tWTpzUhwAZBxP8rzMm-lH6X3HT6qE-JNE0-fXKtEcA';
 const SHEET_NAME = 'Sheet1';
-const API_KEY = 'YOUR_GOOGLE_API_KEY';
+const API_KEY = 'AIzaSyAsXLnI_RlBMWDfDb-_WCHHZsh_XUI2LE0';
 
 async function fetchProjects() {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/15tWTpzUhwAZBxP8rzMm-lH6X3HT6qE-JNE0-fXKtEcA/values/Sheet1?key=AIzaSyAsXLnI_RlBMWDfDb-_WCHHZsh_XUI2LE0`;
     const response = await fetch(url);
     const data = await response.json();
     return data.values.slice(1); // Skip the header row
