@@ -50,9 +50,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    padding-right: 40px;
+    flex: 0 1 auto; /* Allow it to shrink or grow based on content */
+    min-width: 450px; /* Prevent shrinking too much */
+    max-width: 25%; /* Prevent it from taking up too much space */
+    padding-right: 20px;
 }
+
 
 .logo-link {
     text-decoration: none;
@@ -108,11 +111,16 @@ body {
 .right-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Add this line */
+    justify-content: space-between;
     align-items: flex-end;
     text-align: right;
     gap: 5vh;
+    flex: 1; /* Allow it to take up more space */
+    min-width: 1000px; /* Prevent shrinking too much */
+    max-width: 75%; /* Prevent it from taking up too much space */
+    padding-left: 20px; /* Add padding to the left */
 }
+
 
 .profile-img {
     width: 75%;
@@ -158,19 +166,51 @@ body {
     color: var(--highlight-color); 
 }
 
-#project-content {
-    margin-top: 20px;
+/* General Styles */
+.project-content {
+    font-family: 'Geist', sans-serif;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.25;
 }
 
-#project-content img {
-    max-width: 100%;
-    height: auto;
-}
-
-#project-content iframe {
+/* Video Styling */
+.project-video {
     width: 100%;
-    height: 315px;
-    margin-top: 20px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Title & Description */
+.project-title {
+    font-size: 1vw;
+    font-weight: bold;
+    line-height: 1.25;
+    color: #19191A;
+    margin-bottom: 0px;
+}
+
+.project-description {
+    font-size: 1vw;
+    font-weight: 400;
+    color: #19191A;
+    margin-bottom: 20px;
+}
+
+/* Image Gallery */
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 
