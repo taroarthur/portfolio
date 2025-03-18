@@ -16,7 +16,7 @@
 }
 
 /* Everything Else (See/Hear Pages) */
-.see-page, .hear-page {
+.see-page, .hear-page, .see-hear-page {
     --bg-color: #D8D8E8;
     --text-color: #19191A;
     --highlight-color: #FF3600;
@@ -54,6 +54,11 @@ body {
     min-width: 450px; /* Prevent shrinking too much */
     max-width: 25%; /* Prevent it from taking up too much space */
     padding-right: 20px;
+    position: sticky; /* Make the left column sticky */
+    top: 40px; /* Ensure there is always a top margin */ 
+    height: calc(95vh - 40px); /* Full height of the viewport minus top and bottom margins */
+    padding-bottom: 20px; /* Ensure there is always a bottom margin */
+    overflow-y: auto; /* Allow scrolling within the left column if needed */
 }
 
 
@@ -122,6 +127,7 @@ body {
     width: 75%;
     max-width: 450px; /* Ensure the image does not exceed 300px */
     height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add bottom margin */
 }
 
 .mobile-image {
@@ -216,7 +222,20 @@ body {
     object-fit: cover;
 }
 
+/* Custom styles for about.html */
+.about-page .bio-text {
+    text-align: left; /* Left align text */
+    font-size: 2vh; /* Smaller font size (half of 2.7vh) */
+}
 
+.about-page .profile-img {
+    float: left; /* Left align image */
+    width: 30%;
+    max-width: 450px; /* Ensure the image does not exceed 450px */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add bottom margin */
+    margin-right: 20px; /* Add right margin to create space between image and text */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
