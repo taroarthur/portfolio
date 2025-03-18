@@ -104,6 +104,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     const projectContent = document.getElementById("project-content");
     console.log("Project content div found:", projectContent); // Debugging
 
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeBtn = document.querySelector('.mobile-menu .close-btn');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    }
+
+    if (closeBtn && mobileMenu) {
+        closeBtn.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+    }
 
     // Load project content dynamically
     document.addEventListener("click", function (e) {
