@@ -225,7 +225,10 @@ body {
 /* Custom styles for about.html */
 .about-page .bio-text {
     text-align: left; /* Left align text */
-    font-size: 2vh; /* Smaller font size (half of 2.7vh) */
+    font-size: 2vh; /* Default font size for desktop */
+    padding-left: 20px; /* Align with top navigation controls */
+    padding-right: 20px; /* Align with top navigation controls */
+    padding-top: 0; /* Default top padding for desktop */
 }
 
 .about-page .profile-img {
@@ -235,6 +238,17 @@ body {
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 20px; /* Add bottom margin */
     margin-right: 20px; /* Add right margin to create space between image and text */
+    padding-top: 0; /* Default top padding for desktop */
+}
+
+/* Custom styles for index.html */
+.main-page .bio-text {
+    padding-left: 20px; /* Align with top navigation controls */
+    padding-right: 20px; /* Align with top navigation controls */
+}
+
+.main-page .profile-img {
+    padding-left: 20px; /* Align with top navigation controls */
 }
 
 /* Hamburger Menu */
@@ -370,7 +384,7 @@ body {
 .mobile-nav .hamburger div {
     width: 30px;
     height: 3px;
-    background-color: var(--text-color);
+    background-color: var (--text-color);
     border-radius: 5px;
     transition: all 0.3s linear;
     position: relative;
@@ -440,6 +454,8 @@ body {
         grid-template-columns: 1fr;
         gap: 5vh;
         padding-top: 70px; /* Add padding to avoid overlap with mobile nav */
+        padding-left: 15px; /* Align with top navigation controls */
+        padding-right: 15px; /* Align with top navigation controls */
     }
 
     /* Adjust right column layout */
@@ -449,22 +465,38 @@ body {
     }
 
     /* Make profile image responsive */
-    .profile-img {
+    .about-page .profile-img {
         width: 100%;
         max-width: 250px; /* Prevent excessive scaling */
         height: auto; /* Maintain aspect ratio */
+        padding-left: 15px; /* Align with top navigation controls */
+        padding-top: 40px; /* Add top padding */
     }
 
     /* Ensure bio text doesn't exceed width */
-    .bio-text {
+    .about-page .bio-text {
         max-width: 100%;
+        font-size: 4vw; /* Make bio text larger on mobile devices */
+        padding-left: 15px; /* Align with top navigation controls */
+        padding-right: 15px; /* Align with top navigation controls */
+        padding-top: 40px; /* Add top padding */
+    }
+
+    /* Ensure bio text and profile image align with navigation bar on mobile */
+    .main-page .bio-text {
+        padding-left: 15px; /* Align with top navigation controls */
+        padding-right: 15px; /* Align with top navigation controls */
+    }
+
+    .main-page .profile-img {
+        padding-left: 15px; /* Align with top navigation controls */
     }
 
     /* Scale text sizes for smaller screens */
     .work-links a,
     .nav-links a,
     .bio-text {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }
 
