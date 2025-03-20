@@ -36,7 +36,7 @@ function generateProjectContent(project) {
     }
 
     const photos = project[5] ? project[5].split(',').map(photoUrl => `<img class="project-image" src="${photoUrl.trim()}" alt="${project[1]}">`) : [];
-    const videoEmbed = project[4] ? `<iframe class="project-video" src="${project[4]}" frameborder="0" allowfullscreen></iframe>` : (photos.length > 0 ? photos[0] : '');
+    const videoEmbed = project[4] ? `<iframe class="project-video" src="${project[4]}?autoplay=1&controls=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>` : (photos.length > 0 ? photos[0] : '');
 
     return `
         <div class="project-content">
@@ -80,6 +80,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             seeProjectsDropdown.style.display = "block";
             generateProjectList(seeProjects, 'see-projects');
         }
+        if (window.innerWidth <= 768) {
+            generateProjectList(seeProjects, 'project-list');
+        }
     }
 
     if (document.body.classList.contains('hear-page')) {
@@ -87,6 +90,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (hearProjectsDropdown) {
             hearProjectsDropdown.style.display = "block";
             generateProjectList(hearProjects, 'hear-projects');
+        }
+        if (window.innerWidth <= 768) {
+            generateProjectList(hearProjects, 'project-list');
         }
     }
 
@@ -137,6 +143,27 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             projectContent.innerHTML = generateProjectContent(project);
+            console.log("Project content updated:", projectContent.innerHTML); // Debugging
+            projectContent.scrollIntoView({ behavior: 'smooth' }); // Scroll to project content
         }
+    });
+
+    // Add event listeners to project links in desktop view
+    document.querySelectorAll('.project-list a[data-project]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectId = e.target.getAttribute('data-project');
+            console.log("Clicked project ID (desktop):", projectId); // Debugging
+
+            const project = projects.find(p => p[0] === projectId);
+            if (!project) {
+                console.error("Project not found in dataset!");
+                return;
+            }
+
+            projectContent.innerHTML = generateProjectContent(project);
+            console.log("Project content updated (desktop):", projectContent.innerHTML); // Debugging
+            projectContent.scrollIntoView({ behavior: 'smooth' }); // Scroll to project content
+        });
     });
 });
