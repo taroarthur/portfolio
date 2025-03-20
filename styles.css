@@ -195,16 +195,17 @@ body {
 
 /* Title & Description */
 .project-title {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.25;
+    font-size: 1vw;
+    font-weight: normal; /* Change to regular font weight */
+    line-height: 1.5; /* Increase line spacing */
     color: #19191A;
     margin-bottom: 0px;
 }
 
 .project-description {
     font-size: 1vw;
-    font-weight: 400;
+    font-weight: normal; /* Change to regular font weight */
+    line-height: 1.5; /* Increase line spacing */
     color: #19191A;
     margin-bottom: 20px;
 }
@@ -218,8 +219,9 @@ body {
 
 .project-image {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 5px;
     object-fit: cover;
+    margin-bottom: 15px
 }
 
 /* Custom styles for about.html */
@@ -525,21 +527,22 @@ body {
 
     /* Ensure project content is properly visible on mobile devices */
     .project-content {
-        font-size: 4vw; /* Adjust font size for mobile */
+        font-size: vw; /* Adjust font size for mobile */
         line-height: 1.6;
     }
 
     .project-title {
-        font-size: 3.6vw; /* Increase font size for mobile */
-        font-weight: bold;
-        line-height: 1.25;
+        font-size: 3vw; /* Increase font size for mobile */
+        font-weight: normal; /* Change to regular font weight */
+        line-height: 1.5; /* Increase line spacing */
         color: #19191A;
         margin-bottom: 10px; /* Add bottom margin */
     }
 
     .project-description {
         font-size: 3vw; /* Increase font size for mobile */
-        font-weight: normal;
+        font-weight: normal; /* Change to regular font weight */
+        line-height: 1.5; /* Increase line spacing */
         color: #19191A;
         margin-bottom: 20px;
     }
